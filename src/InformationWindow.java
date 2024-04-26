@@ -51,7 +51,7 @@ public class InformationWindow extends JFrame {
     titleLabel.setBounds(10, 11, 413, 56);
     contentPane.add(titleLabel);
     
-    JLabel lblVersion = new JLabel("Version 1.0, developed by Gjin Rexhaj");
+    JLabel lblVersion = new JLabel("Version 1.1, developed by Gjin Rexhaj");
     lblVersion.setHorizontalAlignment(SwingConstants.CENTER);
     lblVersion.setFont(new Font("Tahoma", Font.PLAIN, 11));
     lblVersion.setBounds(10, 64, 413, 56);

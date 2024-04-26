@@ -58,7 +58,7 @@ public class MainFrame extends JFrame {
     JButton one = new JButton("1");
     one.setFont(new Font("Tahoma", Font.PLAIN, 22));
     one.setBackground(Color.WHITE);
-    one.setBounds(160, 247, 65, 65);
+    one.setBounds(10, 247, 65, 65);
     one.addActionListener(new ActionListener() {
       public void actionPerformed(ActionEvent e) {
         String number = textField.getText() + one.getText();
@@ -67,7 +67,7 @@ public class MainFrame extends JFrame {
     });
     contentPane.setLayout(null);
     
-    JLabel calcLabel = new JLabel("Version 1.0");
+    JLabel calcLabel = new JLabel("Version 1.1");
     calcLabel.setBounds(10, 481, 307, 14);
     contentPane.add(calcLabel);
     
@@ -80,7 +80,7 @@ public class MainFrame extends JFrame {
         textField.setText(number);
       }
     });
-    nine.setBounds(10, 95, 65, 65);
+    nine.setBounds(160, 95, 65, 65);
     contentPane.add(nine);
     
     JButton eight = new JButton("8");
@@ -104,7 +104,7 @@ public class MainFrame extends JFrame {
         textField.setText(number);
       }
     });
-    seven.setBounds(160, 95, 65, 65);
+    seven.setBounds(10, 95, 65, 65);
     contentPane.add(seven);
     
     JButton six = new JButton("6");
@@ -116,7 +116,7 @@ public class MainFrame extends JFrame {
         textField.setText(number);
       }
     });
-    six.setBounds(10, 171, 65, 65);
+    six.setBounds(160, 171, 65, 65);
     contentPane.add(six);
     
     JButton five = new JButton("5");
@@ -140,7 +140,7 @@ public class MainFrame extends JFrame {
         textField.setText(number);
       }
     });
-    four.setBounds(160, 171, 65, 65);
+    four.setBounds(10, 171, 65, 65);
     contentPane.add(four);
     
     JButton three = new JButton("3");
@@ -152,7 +152,7 @@ public class MainFrame extends JFrame {
         textField.setText(number);
       }
     });
-    three.setBounds(10, 247, 65, 65);
+    three.setBounds(160, 247, 65, 65);
     contentPane.add(three);
     
     JButton two = new JButton("2");
