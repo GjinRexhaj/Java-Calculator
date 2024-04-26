@@ -1,4 +1,4 @@
-# JAVA CALCULATOR
+# JAVA GUI CALCULATOR
 This is a simple 4-function GUI calculator application which was implemented using Java Swing and AWS.
 
 ## How to run
