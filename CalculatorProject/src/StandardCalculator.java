@@ -47,7 +47,7 @@ public class StandardCalculator extends JFrame {
    * Create the frame.
    */
   public StandardCalculator() {
-    setTitle("Calculator");
+    setTitle(" Standard Calculator");
     setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     setBounds(100, 100, 346, 545);
     contentPane = new JPanel();
