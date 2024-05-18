@@ -294,15 +294,18 @@ public class StandardCalculator extends JFrame {
     btnDivide.setBounds(252, 323, 65, 65);
     contentPane.add(btnDivide);
     
-    JButton btnExit = new JButton("<");
-    btnExit.addActionListener(new ActionListener() {
+    JButton btnBackspace = new JButton("<");
+    btnBackspace.addActionListener(new ActionListener() {
       public void actionPerformed(ActionEvent e) {
+        // acts as a backspace key
+        String RevisedTextField = textField.getText().substring(0, textField.getText().length() - 1);
+        textField.setText(RevisedTextField);
       }
     });
-    btnExit.setFont(new Font("Tahoma", Font.PLAIN, 22));
-    btnExit.setBackground(Color.CYAN);
-    btnExit.setBounds(252, 401, 65, 61);
-    contentPane.add(btnExit);
+    btnBackspace.setFont(new Font("Tahoma", Font.PLAIN, 22));
+    btnBackspace.setBackground(Color.CYAN);
+    btnBackspace.setBounds(252, 401, 65, 61);
+    contentPane.add(btnBackspace);
     
     JList list = new JList();
     list.setBounds(121, 213, 1, 1);
