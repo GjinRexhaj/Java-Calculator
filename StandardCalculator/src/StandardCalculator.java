@@ -306,9 +306,5 @@ public class StandardCalculator extends JFrame {
     btnBackspace.setBackground(Color.CYAN);
     btnBackspace.setBounds(252, 401, 65, 61);
     contentPane.add(btnBackspace);
-    
-    JList list = new JList();
-    list.setBounds(121, 213, 1, 1);
-    contentPane.add(list);
   }
 }
