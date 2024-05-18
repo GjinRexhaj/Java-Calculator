@@ -67,7 +67,7 @@ public class StandardCalculator extends JFrame {
     });
     contentPane.setLayout(null);
     
-    JLabel lblCalcLabel = new JLabel("Version 1.1    https://github.com/gjinrexhaj");
+    JLabel lblCalcLabel = new JLabel("Version 1.2    https://github.com/gjinrexhaj");
     lblCalcLabel.setBounds(10, 481, 307, 14);
     contentPane.add(lblCalcLabel);
     
