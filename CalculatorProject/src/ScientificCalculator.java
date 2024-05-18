@@ -49,16 +49,16 @@ public class ScientificCalculator extends JFrame {
   public ScientificCalculator() {
     setTitle("Scientific Calculator");
     setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    setBounds(100, 100, 346, 545);
+    setBounds(100, 100, 466, 545);
     contentPane = new JPanel();
     contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
     setContentPane(contentPane);
     
     JButton btnOne = new JButton("1");
+    btnOne.setBounds(10, 247, 65, 65);
     btnOne.setFont(new Font("Tahoma", Font.PLAIN, 22));
     btnOne.setBackground(Color.WHITE);
-    btnOne.setBounds(10, 247, 65, 65);
     btnOne.addActionListener(new ActionListener() {
       public void actionPerformed(ActionEvent e) {
         String number = textField.getText() + btnOne.getText();
@@ -72,6 +72,7 @@ public class ScientificCalculator extends JFrame {
     contentPane.add(lblCalcLabel);
     
     JButton btnNine = new JButton("9");
+    btnNine.setBounds(160, 95, 65, 65);
     btnNine.setFont(new Font("Tahoma", Font.PLAIN, 22));
     btnNine.setBackground(Color.WHITE);
     btnNine.addActionListener(new ActionListener() {
@@ -80,10 +81,10 @@ public class ScientificCalculator extends JFrame {
         textField.setText(number);
       }
     });
-    btnNine.setBounds(160, 95, 65, 65);
     contentPane.add(btnNine);
     
     JButton btnEight = new JButton("8");
+    btnEight.setBounds(85, 95, 65, 65);
     btnEight.setBackground(Color.WHITE);
     btnEight.addActionListener(new ActionListener() {
       public void actionPerformed(ActionEvent e) {
@@ -92,10 +93,10 @@ public class ScientificCalculator extends JFrame {
       }
     });
     btnEight.setFont(new Font("Tahoma", Font.PLAIN, 22));
-    btnEight.setBounds(85, 95, 65, 65);
     contentPane.add(btnEight);
     
     JButton btnSeven = new JButton("7");
+    btnSeven.setBounds(10, 95, 65, 65);
     btnSeven.setFont(new Font("Tahoma", Font.PLAIN, 22));
     btnSeven.setBackground(Color.WHITE);
     btnSeven.addActionListener(new ActionListener() {
@@ -104,10 +105,10 @@ public class ScientificCalculator extends JFrame {
         textField.setText(number);
       }
     });
-    btnSeven.setBounds(10, 95, 65, 65);
     contentPane.add(btnSeven);
     
     JButton btnSix = new JButton("6");
+    btnSix.setBounds(160, 171, 65, 65);
     btnSix.setFont(new Font("Tahoma", Font.PLAIN, 22));
     btnSix.setBackground(Color.WHITE);
     btnSix.addActionListener(new ActionListener() {
@@ -116,10 +117,10 @@ public class ScientificCalculator extends JFrame {
         textField.setText(number);
       }
     });
-    btnSix.setBounds(160, 171, 65, 65);
     contentPane.add(btnSix);
     
     JButton btnFive = new JButton("5");
+    btnFive.setBounds(85, 171, 65, 65);
     btnFive.setFont(new Font("Tahoma", Font.PLAIN, 22));
     btnFive.setBackground(Color.WHITE);
     btnFive.addActionListener(new ActionListener() {
@@ -128,10 +129,10 @@ public class ScientificCalculator extends JFrame {
         textField.setText(number);
       }
     });
-    btnFive.setBounds(85, 171, 65, 65);
     contentPane.add(btnFive);
     
     JButton btnFour = new JButton("4");
+    btnFour.setBounds(10, 171, 65, 65);
     btnFour.setFont(new Font("Tahoma", Font.PLAIN, 22));
     btnFour.setBackground(Color.WHITE);
     btnFour.addActionListener(new ActionListener() {
@@ -140,10 +141,10 @@ public class ScientificCalculator extends JFrame {
         textField.setText(number);
       }
     });
-    btnFour.setBounds(10, 171, 65, 65);
     contentPane.add(btnFour);
     
     JButton btnThree = new JButton("3");
+    btnThree.setBounds(160, 247, 65, 65);
     btnThree.setFont(new Font("Tahoma", Font.PLAIN, 22));
     btnThree.setBackground(Color.WHITE);
     btnThree.addActionListener(new ActionListener() {
@@ -152,10 +153,10 @@ public class ScientificCalculator extends JFrame {
         textField.setText(number);
       }
     });
-    btnThree.setBounds(160, 247, 65, 65);
     contentPane.add(btnThree);
     
     JButton btnTwo = new JButton("2");
+    btnTwo.setBounds(84, 247, 66, 65);
     btnTwo.setFont(new Font("Tahoma", Font.PLAIN, 22));
     btnTwo.setBackground(Color.WHITE);
     btnTwo.addActionListener(new ActionListener() {
@@ -164,11 +165,11 @@ public class ScientificCalculator extends JFrame {
         textField.setText(number);
       }
     });
-    btnTwo.setBounds(84, 247, 66, 65);
     contentPane.add(btnTwo);
     contentPane.add(btnOne);
     
     JButton btnDecimal = new JButton(".");
+    btnDecimal.setBounds(85, 323, 65, 65);
     btnDecimal.setFont(new Font("Tahoma", Font.PLAIN, 22));
     btnDecimal.setBackground(Color.WHITE);
     btnDecimal.addActionListener(new ActionListener() {
@@ -177,10 +178,10 @@ public class ScientificCalculator extends JFrame {
         textField.setText(number);
       }
     });
-    btnDecimal.setBounds(85, 323, 65, 65);
     contentPane.add(btnDecimal);
     
     JButton btnEquals = new JButton("=");
+    btnEquals.setBounds(160, 323, 65, 143);
     btnEquals.setBackground(Color.GREEN);
     btnEquals.setForeground(Color.BLACK);
     btnEquals.addActionListener(new ActionListener() {
@@ -208,10 +209,10 @@ public class ScientificCalculator extends JFrame {
       }
     });
     btnEquals.setFont(new Font("Tahoma", Font.BOLD, 22));
-    btnEquals.setBounds(160, 323, 65, 143);
     contentPane.add(btnEquals);
     
     JButton btnClearEverything = new JButton("CE");
+    btnClearEverything.setBounds(10, 401, 140, 65);
     btnClearEverything.setFont(new Font("Tahoma", Font.BOLD, 22));
     btnClearEverything.setForeground(new Color(255, 255, 255));
     btnClearEverything.setBackground(new Color(255, 0, 0));
@@ -220,10 +221,10 @@ public class ScientificCalculator extends JFrame {
         textField.setText(null);
       }
     });
-    btnClearEverything.setBounds(10, 401, 140, 65);
     contentPane.add(btnClearEverything);
     
     JButton btnZero = new JButton("0");
+    btnZero.setBounds(10, 323, 65, 65);
     btnZero.setFont(new Font("Tahoma", Font.PLAIN, 22));
     btnZero.setBackground(Color.WHITE);
     btnZero.addActionListener(new ActionListener() {
@@ -232,17 +233,17 @@ public class ScientificCalculator extends JFrame {
         textField.setText(number);
       }
     });
-    btnZero.setBounds(10, 323, 65, 65);
     contentPane.add(btnZero);
     
     textField = new JTextField();
+    textField.setBounds(10, 11, 430, 73);
     textField.setFont(new Font("Tahoma", Font.PLAIN, 22));
     textField.setBackground(Color.WHITE);
-    textField.setBounds(10, 11, 307, 73);
     contentPane.add(textField);
     textField.setColumns(10);
     
     JButton btnAdd = new JButton("+");
+    btnAdd.setBounds(252, 95, 65, 65);
     btnAdd.setBackground(Color.YELLOW);
     btnAdd.addActionListener(new ActionListener() {
       public void actionPerformed(ActionEvent e) {
@@ -252,10 +253,10 @@ public class ScientificCalculator extends JFrame {
       }
     });
     btnAdd.setFont(new Font("Tahoma", Font.BOLD, 22));
-    btnAdd.setBounds(252, 95, 65, 65);
     contentPane.add(btnAdd);
     
     JButton btnSubtract = new JButton("-");
+    btnSubtract.setBounds(252, 171, 65, 65);
     btnSubtract.setFont(new Font("Tahoma", Font.BOLD, 22));
     btnSubtract.setBackground(Color.YELLOW);
     btnSubtract.addActionListener(new ActionListener() {
@@ -265,10 +266,10 @@ public class ScientificCalculator extends JFrame {
         operation = "-";
       }
     });
-    btnSubtract.setBounds(252, 171, 65, 65);
     contentPane.add(btnSubtract);
     
     JButton btnMultiply = new JButton("x");
+    btnMultiply.setBounds(252, 247, 65, 65);
     btnMultiply.setFont(new Font("Tahoma", Font.BOLD, 22));
     btnMultiply.setBackground(Color.YELLOW);
     btnMultiply.addActionListener(new ActionListener() {
@@ -278,10 +279,10 @@ public class ScientificCalculator extends JFrame {
         operation = "x";
       }
     });
-    btnMultiply.setBounds(252, 247, 65, 65);
     contentPane.add(btnMultiply);
     
     JButton btnDivide = new JButton("/");
+    btnDivide.setBounds(252, 323, 65, 65);
     btnDivide.setFont(new Font("Tahoma", Font.BOLD, 22));
     btnDivide.setBackground(Color.YELLOW);
     btnDivide.addActionListener(new ActionListener() {
@@ -291,10 +292,10 @@ public class ScientificCalculator extends JFrame {
         operation = "/";
       }
     });
-    btnDivide.setBounds(252, 323, 65, 65);
     contentPane.add(btnDivide);
     
     JButton btnBackspace = new JButton("<");
+    btnBackspace.setBounds(252, 401, 65, 61);
     btnBackspace.addActionListener(new ActionListener() {
       public void actionPerformed(ActionEvent e) {
         // acts as a backspace key
@@ -304,7 +305,24 @@ public class ScientificCalculator extends JFrame {
     });
     btnBackspace.setFont(new Font("Tahoma", Font.PLAIN, 22));
     btnBackspace.setBackground(Color.CYAN);
-    btnBackspace.setBounds(252, 401, 65, 61);
     contentPane.add(btnBackspace);
+    
+    JButton btnPercent = new JButton("%");
+    btnPercent.setFont(new Font("Tahoma", Font.BOLD, 22));
+    btnPercent.setBackground(Color.YELLOW);
+    btnPercent.setBounds(363, 95, 65, 65);
+    contentPane.add(btnPercent);
+    
+    JButton btnNegate = new JButton("+/-");
+    btnNegate.setFont(new Font("Tahoma", Font.BOLD, 16));
+    btnNegate.setBackground(new Color(255, 255, 0));
+    btnNegate.setBounds(363, 171, 65, 65);
+    contentPane.add(btnNegate);
+    
+    JButton btnNegate_1 = new JButton("π");
+    btnNegate_1.setFont(new Font("Cambria Math", Font.BOLD, 22));
+    btnNegate_1.setBackground(Color.YELLOW);
+    btnNegate_1.setBounds(363, 247, 65, 65);
+    contentPane.add(btnNegate_1);
   }
 }
