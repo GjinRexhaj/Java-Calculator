@@ -45,11 +45,11 @@ public class InformationWindow extends JFrame {
     setContentPane(contentPane);
     contentPane.setLayout(null);
     
-    JLabel titleLabel = new JLabel("JAVA CALCULATOR");
-    titleLabel.setHorizontalAlignment(SwingConstants.CENTER);
-    titleLabel.setFont(new Font("Tahoma", Font.BOLD, 22));
-    titleLabel.setBounds(10, 11, 413, 56);
-    contentPane.add(titleLabel);
+    JLabel lblTitleLabel = new JLabel("JAVA CALCULATOR");
+    lblTitleLabel.setHorizontalAlignment(SwingConstants.CENTER);
+    lblTitleLabel.setFont(new Font("Tahoma", Font.BOLD, 22));
+    lblTitleLabel.setBounds(10, 11, 413, 56);
+    contentPane.add(lblTitleLabel);
     
     JLabel lblVersion = new JLabel("Version 1.1, developed by Gjin Rexhaj");
     lblVersion.setHorizontalAlignment(SwingConstants.CENTER);
