@@ -319,10 +319,16 @@ public class ScientificCalculator extends JFrame {
     btnNegate.setBounds(363, 171, 65, 65);
     contentPane.add(btnNegate);
     
-    JButton btnNegate_1 = new JButton("π");
-    btnNegate_1.setFont(new Font("Cambria Math", Font.BOLD, 22));
-    btnNegate_1.setBackground(Color.YELLOW);
-    btnNegate_1.setBounds(363, 247, 65, 65);
-    contentPane.add(btnNegate_1);
+    JButton btnPi = new JButton("π");
+    btnPi.setFont(new Font("Cambria Math", Font.BOLD, 22));
+    btnPi.setBackground(Color.YELLOW);
+    btnPi.setBounds(363, 247, 65, 65);
+    contentPane.add(btnPi);
+    
+    JButton btnE = new JButton("e");
+    btnE.setFont(new Font("Cambria Math", Font.BOLD, 22));
+    btnE.setBackground(Color.YELLOW);
+    btnE.setBounds(363, 323, 65, 65);
+    contentPane.add(btnE);
   }
 }
