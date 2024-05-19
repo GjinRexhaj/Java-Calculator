@@ -20,6 +20,8 @@ public class ScientificCalculator extends JFrame {
   private JPanel contentPane;
   private JTextField textField;
 
+  private String decimalFormat = "%.4f";
+  
   double firstOperand;
   double secondOperand;
   double result;
@@ -191,23 +193,23 @@ public class ScientificCalculator extends JFrame {
         // if statement to check and perform operations
         if (operation == "+") {
           result = firstOperand + secondOperand;
-          answer = String.format("%.2f", result);
+          answer = String.format(decimalFormat, result);
           textField.setText(answer); 
         } else if (operation == "-") {
           result = firstOperand - secondOperand;
-          answer = String.format("%.2f", result);
+          answer = String.format(decimalFormat, result);
           textField.setText(answer); 
         }else if (operation == "x") {
           result = firstOperand * secondOperand;
-          answer = String.format("%.2f", result);
+          answer = String.format(decimalFormat, result);
           textField.setText(answer); 
         }else if (operation == "/") {
           result = firstOperand / secondOperand;
-          answer = String.format("%.2f", result);
+          answer = String.format(decimalFormat, result);
           textField.setText(answer); 
         }else if (operation == "mod") {
           result = firstOperand % secondOperand;
-          answer = String.format("%.2f", result);
+          answer = String.format(decimalFormat, result);
           textField.setText(answer); 
         }
         
@@ -347,7 +349,7 @@ public class ScientificCalculator extends JFrame {
         
         firstOperand = Double.parseDouble(textField.getText());
         result = Math.pow(firstOperand, 2);
-        answer = String.format("%.2f", result);
+        answer = String.format(decimalFormat, result);
         textField.setText(answer);
       }
     });
@@ -362,7 +364,7 @@ public class ScientificCalculator extends JFrame {
       public void actionPerformed(ActionEvent e) {
         firstOperand = Double.parseDouble(textField.getText());
         result = Math.sqrt(firstOperand);
-        answer = String.format("%.2f", result);
+        answer = String.format(decimalFormat, result);
         textField.setText(answer);
       }
     });
@@ -385,7 +387,7 @@ public class ScientificCalculator extends JFrame {
         // ln(x) where x is firstOperand
         firstOperand = Double.parseDouble(textField.getText());
         result = Math.log(firstOperand); 
-        answer = String.format("%.2f", result);
+        answer = String.format(decimalFormat, result);
         textField.setText(answer);
         
       }
@@ -449,7 +451,7 @@ public class ScientificCalculator extends JFrame {
         // e^x where x is firstOperand
         firstOperand = Double.parseDouble(textField.getText());
         result = Math.pow(Math.E, firstOperand);
-        answer = String.format("%.2f", result);
+        answer = String.format(decimalFormat, result);
         textField.setText(answer);
       }
     });
