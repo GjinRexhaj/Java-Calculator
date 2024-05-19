@@ -13,6 +13,8 @@ import javax.swing.JTextField;
 import java.awt.Color;
 
 import javax.swing.JList;
+import javax.swing.JTextPane;
+import javax.swing.SwingConstants;
 
 public class ScientificCalculator extends JFrame {
 
@@ -295,7 +297,7 @@ public class ScientificCalculator extends JFrame {
     contentPane.add(btnDivide);
     
     JButton btnBackspace = new JButton("<");
-    btnBackspace.setBounds(252, 401, 65, 61);
+    btnBackspace.setBounds(252, 403, 65, 61);
     btnBackspace.addActionListener(new ActionListener() {
       public void actionPerformed(ActionEvent e) {
         // acts as a backspace key
@@ -306,12 +308,6 @@ public class ScientificCalculator extends JFrame {
     btnBackspace.setFont(new Font("Tahoma", Font.PLAIN, 22));
     btnBackspace.setBackground(Color.CYAN);
     contentPane.add(btnBackspace);
-    
-    JButton btnPercent = new JButton("%");
-    btnPercent.setFont(new Font("Tahoma", Font.BOLD, 17));
-    btnPercent.setBackground(Color.GREEN);
-    btnPercent.setBounds(363, 323, 65, 65);
-    contentPane.add(btnPercent);
     
     JButton btnNegate = new JButton("+/-");
     btnNegate.setFont(new Font("Tahoma", Font.BOLD, 16));
@@ -335,7 +331,7 @@ public class ScientificCalculator extends JFrame {
     JButton btnSquared = new JButton("<html>x<sup>2</sup></html>");
     btnSquared.setFont(new Font("Cambria Math", Font.BOLD, 17));
     btnSquared.setBackground(Color.GREEN);
-    btnSquared.setBounds(438, 401, 65, 65);
+    btnSquared.setBounds(363, 322, 65, 65);
     contentPane.add(btnSquared);
     
     JButton btnSqrt = new JButton("√x");
@@ -362,10 +358,30 @@ public class ScientificCalculator extends JFrame {
     btnModulo.setBounds(438, 247, 65, 65);
     contentPane.add(btnModulo);
     
-    JButton btnxy = new JButton("<html>x<sup>y</sup></html>");
-    btnxy.setFont(new Font("Cambria Math", Font.BOLD, 17));
-    btnxy.setBackground(Color.GREEN);
-    btnxy.setBounds(363, 401, 65, 65);
-    contentPane.add(btnxy);
+    JLabel lblKey1 = new JLabel("Multi-Operand");
+    lblKey1.setFont(new Font("Tahoma", Font.BOLD, 11));
+    lblKey1.setHorizontalAlignment(SwingConstants.CENTER);
+    lblKey1.setForeground(Color.YELLOW);
+    lblKey1.setBounds(363, 408, 140, 14);
+    contentPane.add(lblKey1);
+    
+    JLabel lblKey2 = new JLabel("Single-Operand");
+    lblKey2.setFont(new Font("Tahoma", Font.BOLD, 11));
+    lblKey2.setHorizontalAlignment(SwingConstants.CENTER);
+    lblKey2.setForeground(Color.GREEN);
+    lblKey2.setBounds(363, 423, 140, 14);
+    contentPane.add(lblKey2);
+    
+    JLabel lblKey3 = new JLabel("Modifier/Constant");
+    lblKey3.setFont(new Font("Tahoma", Font.BOLD, 11));
+    lblKey3.setHorizontalAlignment(SwingConstants.CENTER);
+    lblKey3.setForeground(Color.LIGHT_GRAY);
+    lblKey3.setBounds(363, 439, 140, 14);
+    contentPane.add(lblKey3);
+    
+    JPanel panel = new JPanel();
+    panel.setBackground(Color.DARK_GRAY);
+    panel.setBounds(363, 401, 140, 61);
+    contentPane.add(panel);
   }
 }
