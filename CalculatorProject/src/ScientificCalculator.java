@@ -206,6 +206,10 @@ public class ScientificCalculator extends JFrame {
           result = firstOperand / secondOperand;
           answer = String.format("%.2f", result);
           textField.setText(answer); 
+        }else if (operation == "mod") {
+          result = firstOperand % secondOperand;
+          answer = String.format("%.2f", result);
+          textField.setText(answer); 
         }
         
       }
@@ -353,6 +357,13 @@ public class ScientificCalculator extends JFrame {
     contentPane.add(btnLogE);
     
     JButton btnModulo = new JButton("mod");
+    btnModulo.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent e) {
+        firstOperand = Double.parseDouble(textField.getText());
+        textField.setText("");
+        operation = "mod";
+      }
+    });
     btnModulo.setFont(new Font("Cambria Math", Font.BOLD, 13));
     btnModulo.setBackground(Color.YELLOW);
     btnModulo.setBounds(252, 426, 65, 65);
