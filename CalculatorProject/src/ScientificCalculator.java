@@ -344,6 +344,15 @@ public class ScientificCalculator extends JFrame {
     
     // use HTML formatting for superscript
     JButton btnSquared = new JButton("<html>x<sup>2</sup></html>");
+    btnSquared.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent e) {
+        
+        firstOperand = Double.parseDouble(textField.getText());
+        result = Math.pow(firstOperand, 2);
+        answer = String.format("%.2f", result);
+        textField.setText(answer);
+      }
+    });
     btnSquared.setToolTipText("Square");
     btnSquared.setFont(new Font("Cambria Math", Font.BOLD, 17));
     btnSquared.setBackground(Color.GREEN);
@@ -351,6 +360,14 @@ public class ScientificCalculator extends JFrame {
     contentPane.add(btnSquared);
     
     JButton btnSqrt = new JButton("√x");
+    btnSqrt.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent e) {
+        firstOperand = Double.parseDouble(textField.getText());
+        result = Math.sqrt(firstOperand);
+        answer = String.format("%.2f", result);
+        textField.setText(answer);
+      }
+    });
     btnSqrt.setToolTipText("Square root");
     btnSqrt.setFont(new Font("Cambria Math", Font.BOLD, 17));
     btnSqrt.setBackground(Color.GREEN);
@@ -365,6 +382,16 @@ public class ScientificCalculator extends JFrame {
     contentPane.add(btnAbsoluteValue);
     
     JButton btnLogE = new JButton("ln(x)");
+    btnLogE.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent e) {
+        // ln(x) where x is firstOperand
+        firstOperand = Double.parseDouble(textField.getText());
+        result = Math.log(firstOperand); 
+        answer = String.format("%.2f", result);
+        textField.setText(answer);
+        
+      }
+    });
     btnLogE.setToolTipText("Natural logarithm");
     btnLogE.setFont(new Font("Cambria Math", Font.BOLD, 13));
     btnLogE.setBackground(Color.GREEN);
@@ -419,6 +446,15 @@ public class ScientificCalculator extends JFrame {
     contentPane.add(lblOperationLabel);
     
     JButton btnExponentE = new JButton("<html>e<sup>x</sup></html>");
+    btnExponentE.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent e) {
+        // e^x where x is firstOperand
+        firstOperand = Double.parseDouble(textField.getText());
+        result = Math.pow(Math.E, firstOperand);
+        answer = String.format("%.2f", result);
+        textField.setText(answer);
+      }
+    });
     btnExponentE.setToolTipText("Natural exponent");
     btnExponentE.setFont(new Font("Cambria Math", Font.BOLD, 17));
     btnExponentE.setBackground(Color.GREEN);
