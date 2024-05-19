@@ -310,7 +310,7 @@ public class ScientificCalculator extends JFrame {
     JButton btnPercent = new JButton("%");
     btnPercent.setFont(new Font("Tahoma", Font.BOLD, 17));
     btnPercent.setBackground(Color.GREEN);
-    btnPercent.setBounds(363, 325, 65, 65);
+    btnPercent.setBounds(363, 323, 65, 65);
     contentPane.add(btnPercent);
     
     JButton btnNegate = new JButton("+/-");
