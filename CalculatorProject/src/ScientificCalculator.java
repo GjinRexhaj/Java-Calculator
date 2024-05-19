@@ -183,6 +183,7 @@ public class ScientificCalculator extends JFrame {
     contentPane.add(btnDecimal);
     
     JButton btnEquals = new JButton("=");
+    btnEquals.setToolTipText("Equals");
     btnEquals.setBounds(160, 426, 65, 65);
     btnEquals.setBackground(Color.GREEN);
     btnEquals.setForeground(Color.BLACK);
@@ -218,6 +219,7 @@ public class ScientificCalculator extends JFrame {
     contentPane.add(btnEquals);
     
     JButton btnClearEverything = new JButton("CE");
+    btnClearEverything.setToolTipText("Clear everything (textfield and operation chain)");
     btnClearEverything.setBounds(10, 426, 140, 65);
     btnClearEverything.setFont(new Font("Tahoma", Font.BOLD, 22));
     btnClearEverything.setForeground(new Color(255, 255, 255));
@@ -242,13 +244,15 @@ public class ScientificCalculator extends JFrame {
     contentPane.add(btnZero);
     
     textField = new JTextField();
-    textField.setBounds(10, 44, 493, 65);
+    textField.setToolTipText("You can type numbers here!");
+    textField.setBounds(10, 57, 494, 52);
     textField.setFont(new Font("Tahoma", Font.PLAIN, 22));
     textField.setBackground(Color.WHITE);
     contentPane.add(textField);
     textField.setColumns(10);
     
     JButton btnAdd = new JButton("+");
+    btnAdd.setToolTipText("Addition");
     btnAdd.setBounds(252, 120, 65, 65);
     btnAdd.setBackground(Color.YELLOW);
     btnAdd.addActionListener(new ActionListener() {
@@ -262,6 +266,7 @@ public class ScientificCalculator extends JFrame {
     contentPane.add(btnAdd);
     
     JButton btnSubtract = new JButton("-");
+    btnSubtract.setToolTipText("Subtraction");
     btnSubtract.setBounds(252, 196, 65, 65);
     btnSubtract.setFont(new Font("Tahoma", Font.BOLD, 22));
     btnSubtract.setBackground(Color.YELLOW);
@@ -275,6 +280,7 @@ public class ScientificCalculator extends JFrame {
     contentPane.add(btnSubtract);
     
     JButton btnMultiply = new JButton("x");
+    btnMultiply.setToolTipText("Multiplication");
     btnMultiply.setBounds(252, 272, 65, 65);
     btnMultiply.setFont(new Font("Tahoma", Font.BOLD, 22));
     btnMultiply.setBackground(Color.YELLOW);
@@ -288,6 +294,7 @@ public class ScientificCalculator extends JFrame {
     contentPane.add(btnMultiply);
     
     JButton btnDivide = new JButton("/");
+    btnDivide.setToolTipText("Division");
     btnDivide.setBounds(252, 348, 65, 65);
     btnDivide.setFont(new Font("Tahoma", Font.BOLD, 22));
     btnDivide.setBackground(Color.YELLOW);
@@ -301,6 +308,7 @@ public class ScientificCalculator extends JFrame {
     contentPane.add(btnDivide);
     
     JButton btnBackspace = new JButton("<");
+    btnBackspace.setToolTipText("Backspace");
     btnBackspace.setBounds(160, 348, 65, 65);
     btnBackspace.addActionListener(new ActionListener() {
       public void actionPerformed(ActionEvent e) {
@@ -314,49 +322,57 @@ public class ScientificCalculator extends JFrame {
     contentPane.add(btnBackspace);
     
     JButton btnNegate = new JButton("+/-");
+    btnNegate.setToolTipText("Negate");
     btnNegate.setFont(new Font("Tahoma", Font.BOLD, 16));
     btnNegate.setBackground(Color.LIGHT_GRAY);
     btnNegate.setBounds(363, 120, 65, 65);
     contentPane.add(btnNegate);
     
     JButton btnPi = new JButton("π");
+    btnPi.setToolTipText("Pi");
     btnPi.setFont(new Font("Cambria Math", Font.BOLD, 22));
     btnPi.setBackground(Color.LIGHT_GRAY);
-    btnPi.setBounds(363, 271, 65, 65);
+    btnPi.setBounds(363, 272, 65, 65);
     contentPane.add(btnPi);
     
     JButton btnE = new JButton("e");
+    btnE.setToolTipText("Natural constant");
     btnE.setFont(new Font("Cambria Math", Font.BOLD, 22));
     btnE.setBackground(Color.LIGHT_GRAY);
-    btnE.setBounds(363, 196, 65, 65);
+    btnE.setBounds(363, 348, 65, 65);
     contentPane.add(btnE);
     
     // use HTML formatting for superscript
     JButton btnSquared = new JButton("<html>x<sup>2</sup></html>");
+    btnSquared.setToolTipText("Square");
     btnSquared.setFont(new Font("Cambria Math", Font.BOLD, 17));
     btnSquared.setBackground(Color.GREEN);
-    btnSquared.setBounds(438, 347, 65, 65);
+    btnSquared.setBounds(438, 348, 65, 65);
     contentPane.add(btnSquared);
     
     JButton btnSqrt = new JButton("√x");
+    btnSqrt.setToolTipText("Square root");
     btnSqrt.setFont(new Font("Cambria Math", Font.BOLD, 17));
     btnSqrt.setBackground(Color.GREEN);
     btnSqrt.setBounds(438, 272, 65, 65);
     contentPane.add(btnSqrt);
     
     JButton btnAbsoluteValue = new JButton("|x|");
+    btnAbsoluteValue.setToolTipText("Absolute value");
     btnAbsoluteValue.setFont(new Font("Cambria Math", Font.BOLD, 17));
     btnAbsoluteValue.setBackground(Color.LIGHT_GRAY);
-    btnAbsoluteValue.setBounds(363, 348, 65, 65);
+    btnAbsoluteValue.setBounds(363, 196, 65, 65);
     contentPane.add(btnAbsoluteValue);
     
     JButton btnLogE = new JButton("ln(x)");
+    btnLogE.setToolTipText("Natural logarithm");
     btnLogE.setFont(new Font("Cambria Math", Font.BOLD, 13));
     btnLogE.setBackground(Color.GREEN);
     btnLogE.setBounds(438, 120, 65, 65);
     contentPane.add(btnLogE);
     
     JButton btnModulo = new JButton("mod");
+    btnModulo.setToolTipText("Modulo");
     btnModulo.addActionListener(new ActionListener() {
       public void actionPerformed(ActionEvent e) {
         firstOperand = Double.parseDouble(textField.getText());
@@ -391,16 +407,19 @@ public class ScientificCalculator extends JFrame {
     contentPane.add(lblKey3);
     
     JPanel panel = new JPanel();
+    panel.setToolTipText("A particular button's behavior can be denoted by it's color");
     panel.setBackground(Color.DARK_GRAY);
     panel.setBounds(363, 426, 140, 65);
     contentPane.add(panel);
     
     JLabel lblOperationLabel = new JLabel("This text will display your operation chain...");
+    lblOperationLabel.setToolTipText("Visual representation on your operation chain");
     lblOperationLabel.setFont(new Font("Tahoma", Font.BOLD, 20));
-    lblOperationLabel.setBounds(10, 11, 493, 22);
+    lblOperationLabel.setBounds(10, 24, 493, 22);
     contentPane.add(lblOperationLabel);
     
     JButton btnExponentE = new JButton("<html>e<sup>x</sup></html>");
+    btnExponentE.setToolTipText("Natural exponent");
     btnExponentE.setFont(new Font("Cambria Math", Font.BOLD, 17));
     btnExponentE.setBackground(Color.GREEN);
     btnExponentE.setBounds(438, 196, 65, 65);
