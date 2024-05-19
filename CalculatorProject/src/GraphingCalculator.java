@@ -10,9 +10,7 @@ import java.awt.Font;
 import java.awt.Graphics;
 import javax.swing.JTextField;
 import javax.swing.JLabel;
-import javax.swing.JSlider;
 import javax.swing.SwingConstants;
-import java.awt.SystemColor;
 
 public class GraphingCalculator extends JFrame {
 

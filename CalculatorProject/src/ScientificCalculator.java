@@ -12,8 +12,6 @@ import java.awt.Font;
 import javax.swing.JTextField;
 import java.awt.Color;
 
-import javax.swing.JList;
-import javax.swing.JTextPane;
 import javax.swing.SwingConstants;
 
 public class ScientificCalculator extends JFrame {

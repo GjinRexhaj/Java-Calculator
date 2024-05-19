@@ -12,8 +12,6 @@ import java.awt.Font;
 import javax.swing.JTextField;
 import java.awt.Color;
 
-import javax.swing.JList;
-
 public class StandardCalculator extends JFrame {
 
   private static final long serialVersionUID = 1L;
