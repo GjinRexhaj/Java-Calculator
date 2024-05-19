@@ -49,7 +49,7 @@ public class ScientificCalculator extends JFrame {
   public ScientificCalculator() {
     setTitle("Scientific Calculator");
     setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    setBounds(100, 100, 466, 545);
+    setBounds(100, 100, 530, 545);
     contentPane = new JPanel();
     contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 
@@ -236,7 +236,7 @@ public class ScientificCalculator extends JFrame {
     contentPane.add(btnZero);
     
     textField = new JTextField();
-    textField.setBounds(10, 11, 430, 73);
+    textField.setBounds(10, 11, 493, 73);
     textField.setFont(new Font("Tahoma", Font.PLAIN, 22));
     textField.setBackground(Color.WHITE);
     contentPane.add(textField);
@@ -308,27 +308,64 @@ public class ScientificCalculator extends JFrame {
     contentPane.add(btnBackspace);
     
     JButton btnPercent = new JButton("%");
-    btnPercent.setFont(new Font("Tahoma", Font.BOLD, 22));
-    btnPercent.setBackground(Color.YELLOW);
-    btnPercent.setBounds(363, 95, 65, 65);
+    btnPercent.setFont(new Font("Tahoma", Font.BOLD, 17));
+    btnPercent.setBackground(Color.GREEN);
+    btnPercent.setBounds(363, 325, 65, 65);
     contentPane.add(btnPercent);
     
     JButton btnNegate = new JButton("+/-");
     btnNegate.setFont(new Font("Tahoma", Font.BOLD, 16));
-    btnNegate.setBackground(new Color(255, 255, 0));
-    btnNegate.setBounds(363, 171, 65, 65);
+    btnNegate.setBackground(Color.LIGHT_GRAY);
+    btnNegate.setBounds(363, 95, 65, 65);
     contentPane.add(btnNegate);
     
     JButton btnPi = new JButton("π");
     btnPi.setFont(new Font("Cambria Math", Font.BOLD, 22));
-    btnPi.setBackground(Color.YELLOW);
-    btnPi.setBounds(363, 247, 65, 65);
+    btnPi.setBackground(Color.LIGHT_GRAY);
+    btnPi.setBounds(363, 171, 65, 65);
     contentPane.add(btnPi);
     
     JButton btnE = new JButton("e");
     btnE.setFont(new Font("Cambria Math", Font.BOLD, 22));
-    btnE.setBackground(Color.YELLOW);
-    btnE.setBounds(363, 323, 65, 65);
+    btnE.setBackground(Color.LIGHT_GRAY);
+    btnE.setBounds(363, 247, 65, 65);
     contentPane.add(btnE);
+    
+    // use HTML formatting for superscript
+    JButton btnSquared = new JButton("<html>x<sup>2</sup></html>");
+    btnSquared.setFont(new Font("Cambria Math", Font.BOLD, 17));
+    btnSquared.setBackground(Color.GREEN);
+    btnSquared.setBounds(438, 401, 65, 65);
+    contentPane.add(btnSquared);
+    
+    JButton btnSqrt = new JButton("√x");
+    btnSqrt.setFont(new Font("Cambria Math", Font.BOLD, 17));
+    btnSqrt.setBackground(Color.GREEN);
+    btnSqrt.setBounds(438, 323, 65, 65);
+    contentPane.add(btnSqrt);
+    
+    JButton btnAbsoluteValue = new JButton("|x|");
+    btnAbsoluteValue.setFont(new Font("Cambria Math", Font.BOLD, 17));
+    btnAbsoluteValue.setBackground(Color.YELLOW);
+    btnAbsoluteValue.setBounds(438, 95, 65, 65);
+    contentPane.add(btnAbsoluteValue);
+    
+    JButton btnLogE = new JButton("ln(x)");
+    btnLogE.setFont(new Font("Cambria Math", Font.BOLD, 13));
+    btnLogE.setBackground(Color.YELLOW);
+    btnLogE.setBounds(438, 171, 65, 65);
+    contentPane.add(btnLogE);
+    
+    JButton btnModulo = new JButton("mod");
+    btnModulo.setFont(new Font("Cambria Math", Font.BOLD, 13));
+    btnModulo.setBackground(Color.YELLOW);
+    btnModulo.setBounds(438, 247, 65, 65);
+    contentPane.add(btnModulo);
+    
+    JButton btnxy = new JButton("<html>x<sup>y</sup></html>");
+    btnxy.setFont(new Font("Cambria Math", Font.BOLD, 17));
+    btnxy.setBackground(Color.GREEN);
+    btnxy.setBounds(363, 401, 65, 65);
+    contentPane.add(btnxy);
   }
 }
