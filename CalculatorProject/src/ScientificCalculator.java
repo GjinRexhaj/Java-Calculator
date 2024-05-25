@@ -324,8 +324,17 @@ public class ScientificCalculator extends JFrame {
     JButton btnNegate = new JButton("+/-");
     btnNegate.addActionListener(new ActionListener() {
       public void actionPerformed(ActionEvent e) {
-        String RevisedTextField = "-" + textField.getText();
-        textField.setText(RevisedTextField);
+        String negative = "-";
+        
+        if (textField.getText().substring(0, 1).compareTo(negative) == 0) {
+          String RevisedTextField = textField.getText().substring(1, textField.getText().length());
+          textField.setText(RevisedTextField);
+          
+        } else {
+          String RevisedTextField = "-" + textField.getText();
+          textField.setText(RevisedTextField);
+        }
+        
       }
     });
     btnNegate.setToolTipText("Negate");
