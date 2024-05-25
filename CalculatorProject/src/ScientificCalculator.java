@@ -21,13 +21,13 @@ public class ScientificCalculator extends JFrame {
   private JTextField textField;
 
   private String decimalFormat = "%.4f";
-  
+
   double firstOperand;
   double secondOperand;
   double result;
   String operation;
   String answer;
-  
+
   /**
    * Launch the application.
    */
@@ -381,9 +381,22 @@ public class ScientificCalculator extends JFrame {
     contentPane.add(btnSqrt);
     
     JButton btnAbsoluteValue = new JButton("|x|");
+    btnAbsoluteValue.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent e) {
+        
+        String negative = "-";
+        
+        if (textField.getText().substring(0, 1).compareTo(negative) == 0) {
+          String RevisedString = textField.getText().substring(1, textField.getText().length());
+          textField.setText(RevisedString);
+        } 
+        
+
+      }
+    });
     btnAbsoluteValue.setToolTipText("Absolute value");
     btnAbsoluteValue.setFont(new Font("Cambria Math", Font.BOLD, 17));
-    btnAbsoluteValue.setBackground(Color.LIGHT_GRAY);
+    btnAbsoluteValue.setBackground(Color.GREEN);
     btnAbsoluteValue.setBounds(363, 196, 65, 65);
     contentPane.add(btnAbsoluteValue);
     
