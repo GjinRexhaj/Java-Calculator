@@ -322,6 +322,12 @@ public class ScientificCalculator extends JFrame {
     contentPane.add(btnBackspace);
     
     JButton btnNegate = new JButton("+/-");
+    btnNegate.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent e) {
+        String RevisedTextField = "-" + textField.getText();
+        textField.setText(RevisedTextField);
+      }
+    });
     btnNegate.setToolTipText("Negate");
     btnNegate.setFont(new Font("Tahoma", Font.BOLD, 16));
     btnNegate.setBackground(Color.LIGHT_GRAY);
