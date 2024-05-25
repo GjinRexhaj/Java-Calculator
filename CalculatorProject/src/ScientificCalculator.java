@@ -344,6 +344,10 @@ public class ScientificCalculator extends JFrame {
     contentPane.add(btnNegate);
     
     JButton btnPi = new JButton("π");
+    btnPi.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent e) {
+      }
+    });
     btnPi.setToolTipText("Pi");
     btnPi.setFont(new Font("Cambria Math", Font.BOLD, 22));
     btnPi.setBackground(Color.LIGHT_GRAY);
@@ -405,7 +409,7 @@ public class ScientificCalculator extends JFrame {
     });
     btnAbsoluteValue.setToolTipText("Absolute value");
     btnAbsoluteValue.setFont(new Font("Cambria Math", Font.BOLD, 17));
-    btnAbsoluteValue.setBackground(Color.GREEN);
+    btnAbsoluteValue.setBackground(Color.LIGHT_GRAY);
     btnAbsoluteValue.setBounds(363, 196, 65, 65);
     contentPane.add(btnAbsoluteValue);
     
