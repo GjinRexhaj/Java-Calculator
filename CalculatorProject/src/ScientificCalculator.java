@@ -346,6 +346,7 @@ public class ScientificCalculator extends JFrame {
     JButton btnPi = new JButton("π");
     btnPi.addActionListener(new ActionListener() {
       public void actionPerformed(ActionEvent e) {
+        textField.setText(Math.PI + textField.getText());
       }
     });
     btnPi.setToolTipText("Pi");
@@ -355,6 +356,11 @@ public class ScientificCalculator extends JFrame {
     contentPane.add(btnPi);
     
     JButton btnE = new JButton("e");
+    btnE.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent e) {
+        textField.setText(Math.E + textField.getText());
+      }
+    });
     btnE.setToolTipText("Natural constant");
     btnE.setFont(new Font("Cambria Math", Font.BOLD, 22));
     btnE.setBackground(Color.LIGHT_GRAY);
