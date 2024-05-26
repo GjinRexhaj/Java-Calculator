@@ -1,5 +1,5 @@
 # JAVA GUI CALCULATOR
-This is a simple 4-function GUI calculator application which was implemented using Java Swing and AWS.
+These are simple GUI calculator applications which were implemented using Java Swing and AWS.
 
 ## How to run
-To run this program on Windows, simply download Calculator.jar and run the file like an executable.
+To run one of these programs on Windows, navigate to the latest release and download/run whichever calculator variant you'd like
