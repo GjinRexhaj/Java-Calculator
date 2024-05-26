@@ -26,8 +26,8 @@ public class ScientificCalculator extends JFrame {
   double secondOperand;
   double result;
   String operation;
-  String answer;
-
+  String answer; 
+  
   /**
    * Launch the application.
    */
@@ -44,11 +44,13 @@ public class ScientificCalculator extends JFrame {
       }
     });
   }
-
+  
+  
   /**
    * Create the frame.
    */
   public ScientificCalculator() {
+    
     setTitle("Scientific Calculator");
     setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     setBounds(100, 100, 530, 570);
@@ -180,7 +182,8 @@ public class ScientificCalculator extends JFrame {
         textField.setText(number);
       }
     });
-    contentPane.add(btnDecimal);
+    contentPane.add(btnDecimal); 
+    
     
     JButton btnEquals = new JButton("=");
     btnEquals.setToolTipText("Equals");
@@ -245,7 +248,7 @@ public class ScientificCalculator extends JFrame {
     
     textField = new JTextField();
     textField.setToolTipText("You can type numbers here!");
-    textField.setBounds(10, 57, 494, 52);
+    textField.setBounds(10, 33, 494, 52);
     textField.setFont(new Font("Tahoma", Font.PLAIN, 22));
     textField.setBackground(Color.WHITE);
     contentPane.add(textField);
@@ -476,12 +479,6 @@ public class ScientificCalculator extends JFrame {
     panel.setBackground(Color.DARK_GRAY);
     panel.setBounds(363, 426, 140, 65);
     contentPane.add(panel);
-    
-    JLabel lblOperationLabel = new JLabel("This text will display your operation chain...");
-    lblOperationLabel.setToolTipText("Visual representation on your operation chain");
-    lblOperationLabel.setFont(new Font("Tahoma", Font.BOLD, 20));
-    lblOperationLabel.setBounds(10, 24, 493, 22);
-    contentPane.add(lblOperationLabel);
     
     JButton btnExponentE = new JButton("<html>e<sup>x</sup></html>");
     btnExponentE.addActionListener(new ActionListener() {
